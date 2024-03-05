@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -46,4 +47,9 @@ func main() {
 
 	tc, _ := context.WithTimeout(context.Background(), 30*time.Second)
 	s.Shutdown(tc)
+	moji()
+}
+
+func moji() {
+	fmt.Println("hello moji")
 }
