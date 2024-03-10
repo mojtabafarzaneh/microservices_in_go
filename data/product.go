@@ -29,7 +29,7 @@ func GetProduct() Products {
 	return productList
 }
 
-var productList = []*Product{
+var productList = Products{
 	&Product{
 		ID:          1,
 		Name:        "Latte",
