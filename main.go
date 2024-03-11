@@ -16,12 +16,12 @@ func main() {
 
 	//create a new serve myx and register the handlers
 	ph := handelers.NewProducts(l)
-	hh := handelers.NewHello(l)
-	gh := handelers.NewGoodbye(l)
+	//hh := handelers.NewHello(l)
+	//gh := handelers.NewGoodbye(l)
 	sm := http.NewServeMux()
-	sm.Handle("/", hh)
-	sm.Handle("/goodbye", gh)
-	sm.Handle("/product", ph)
+	//sm.Handle("/", hh)
+	//sm.Handle("/goodbye", gh)
+	sm.Handle("/", ph)
 
 	//create a server
 	s := &http.Server{
